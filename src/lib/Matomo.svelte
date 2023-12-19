@@ -1,26 +1,26 @@
 <script lang="ts">
   import { onMount } from "svelte"
-
+  import { env } from "$env/dynamic/public"
   import { afterNavigate } from "$app/navigation"
   import { page } from "$app/stores"
+  import { tracker } from "$lib/tracker.js"
 
-  import { tracker } from "$lib/stores/tracker"
-
-  export let url: string = import.meta.env.VITE_MATOMO_URL
-  export let siteId: number = import.meta.env.VITE_MATOMO_SITE_ID
-  export let cookies = true
-  export let consentRequired = false
+  export let url: string = env.PUBLIC_MATOMO_URL
+  export let siteId: number = +env.PUBLIC_MATOMO_SITE_ID
+  export let disableCookies = false
+  export let requireConsent = false
   export let doNotTrack = false
-  export let heartBeat = 15
+  export let heartBeat : number|null = 15
 
   async function initializeMatomo() {
     const matomo = window.Matomo
     if (!matomo) return
+
     const track = matomo.getTracker(`${url}/matomo.php`, siteId)
     if (!track) return
 
-    if (!cookies) track.disableCookies()
-    if (consentRequired) track.requireConsent()
+    if (disableCookies) track.disableCookies()
+    if (requireConsent) track.requireConsent()
     if (doNotTrack) track.setDoNotTrack(true)
     if (heartBeat) track.enableHeartBeatTimer(heartBeat)
 
