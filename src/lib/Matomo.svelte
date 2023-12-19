@@ -10,7 +10,7 @@
   export let disableCookies = false
   export let requireConsent = false
   export let doNotTrack = false
-  export let heartBeat : number|null = 15
+  export let heartBeat: number | null = 15
 
   async function initializeMatomo() {
     const matomo = window.Matomo
