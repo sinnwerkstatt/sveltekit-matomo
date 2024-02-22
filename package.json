@@ -1,6 +1,6 @@
 {
   "name": "@sinnwerkstatt/sveltekit-matomo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Matomo library for SvelteKit with support for routing",
   "license": "AGPL-3.0-or-later",
   "homepage": "https://github.com/sinnwerkstatt/sveltekit-matomo",
@@ -27,9 +27,9 @@
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
-  "peerDependencies": {
-    "svelte": "^4.0.0",
-    "@sveltejs/kit": "^1.10.0"
+  "dependencies": {
+    "svelte": ">=4.0.0",
+    "@sveltejs/kit": ">=1.10.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
