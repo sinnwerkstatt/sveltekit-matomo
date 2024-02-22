@@ -1,7 +1,10 @@
 {
   "name": "@sinnwerkstatt/sveltekit-matomo",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "Matomo library for SvelteKit with support for routing",
   "license": "AGPL-3.0-or-later",
+  "homepage": "https://github.com/sinnwerkstatt/sveltekit-matomo?tab=readme-ov-file",
+  "bugs": "https://github.com/sinnwerkstatt/sveltekit-matomo/issues",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
