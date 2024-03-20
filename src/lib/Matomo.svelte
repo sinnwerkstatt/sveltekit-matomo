@@ -12,6 +12,8 @@
   export let doNotTrack = false
   export let heartBeat: number | null = 15
 
+  export let linkTracking: boolean | null = null
+
   async function initializeMatomo() {
     const matomo = window.Matomo
     if (!matomo) return
@@ -23,6 +25,7 @@
     if (requireConsent) track.requireConsent()
     if (doNotTrack) track.setDoNotTrack(true)
     if (heartBeat) track.enableHeartBeatTimer(heartBeat)
+    if (linkTracking !== null) track.enableLinkTracking(linkTracking)
 
     tracker.set(track)
 
