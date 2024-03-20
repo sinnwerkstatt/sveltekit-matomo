@@ -1,6 +1,6 @@
 {
   "name": "@sinnwerkstatt/sveltekit-matomo",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Matomo library for SvelteKit with support for routing",
   "license": "AGPL-3.0-or-later",
   "homepage": "https://github.com/sinnwerkstatt/sveltekit-matomo",
