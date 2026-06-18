@@ -1,3 +1,5 @@
+**NOTE:** This project has moved. Active development is at https://codeberg.org/sinnwerkstatt/sveltekit-matomo. Please file issues and PRs there.
+
 # how to use
 
 1. include `<Matomo />` in your `+layout.svelte`.
